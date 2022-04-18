@@ -1,11 +1,12 @@
 import "./App.css";
-import ApiRequest from "./ApiRequest";
+import Addimage from "./estudo/addimage";
+//import ApiRequest from "./ApiRequest";
 
 function App() {
   return (
     <>
     <h1>The Critic</h1>
-    <ApiRequest />
+    <Addimage />
     </>
   );
 }
