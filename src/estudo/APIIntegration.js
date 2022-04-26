@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import FormUser from "./FormUser";
-import {BsTrash} from "react-icons/bs"
+import {BsTrash as IconTrash} from "react-icons/bs"
 
 const APIIntegration = () => {
 const [users, setUsers] = useState(null);
@@ -36,7 +36,7 @@ return (
           <div key={user.id}>
             <h1>{user.name}</h1>
             <p>{user.email}</p>
-            <BsTrash onClick={() => handleTrashClick(user.id)}/>
+            <IconTrash onClick={() => handleTrashClick(user.id)}/>
           </div>
         )
       })
