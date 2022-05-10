@@ -1,8 +1,14 @@
-header-nav{
-    background-color: rgb(255, 0, 0);
+.header-nav{
+    background-color: #EDAF0F;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 0.5rem 0.9rem;
-    color: white;
+    padding: 0.01rem 0.9rem;
 }
+
+.logo {
+    width: 3rem;
+}
+

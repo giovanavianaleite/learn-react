@@ -1,20 +1,20 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
+import Filmes from './pages/Filmes'
+import LayoutDefault from './pages/LayoutDefault'
+import Series from './pages/Series'
+import Sobre from './pages/Sobre'
+import Home from './pages/Home'
+
 function App() {
   return (
-      <Router>
-        <ul>
-          <li>Menu</li>
-          <li>Filmes</li>
-          <li>Séries</li>
-          <li>O que é o The Critic!?</li>
-        </ul>
-        <Switch>
-          <Route exact path="/">
-            <Menu />
+        <Routes>
+          <Route path="/" element={<LayoutDefault />}>
+            <Route index element={<Home />} />
+            <Route path="/filmes" element={<Filmes />} />
+            <Route path="/series" element={<Series />} />
+            <Route path="/sobre" element={<Sobre />} />
           </Route>
-        </Switch>
-        <p>Footer</p>
-      </Router>
+      </Routes>
   )
 }
 

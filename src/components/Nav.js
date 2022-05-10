@@ -1,21 +1,14 @@
-import {Link} from 'react-router-dom'
-import Container from './Container'
-import logo from '../assets/img/logo.svg'
-import "./Nav.css";
-
-function Nav () {
-    return(
-       <nav>
-           <Container>
-            <Link to="/">
-                <img src={logo} alt="The critic" />
-            </Link>
-            <Link to="/">Menu</Link>
-            <Link to="/Filmes">Filmes</Link>
-            <Link to="/Séries">Séries</Link>
-            <Link to="/Sobre">O que é o The Critic!</Link>
-           </Container>
-       </nav>
+import "./Nav.css"
+import { Link } from 'react-router-dom'
+function Nav() {
+    return (
+        <div className='nav'>
+        <Link to="/">Home</Link>
+        <Link to="/filmes">Filmes</Link>
+        <Link to="/series">Séries</Link>
+        <Link to="/sobre">O que é o The Critic!?</Link>
+       </div>
     )
-    }
-    export default Nav;
+}
+
+export default Nav
