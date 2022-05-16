@@ -8,6 +8,9 @@ const Header = () => {
     return (
         <header className="header-nav">
             <Link to="/"><Logo className="logo"/></Link>
+            <p className="nome">
+                <span>THE CRITIC!</span>
+            </p>
             <Nav />
         </header>
     )

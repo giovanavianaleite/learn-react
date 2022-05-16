@@ -14,8 +14,11 @@ const Footer = () => {
               <FaInstagram />
             </li>
           </ul>
+          <div className='linha'>
+            
+          </div>
           <p className='direitos'>
-            <span>Direitos autorais Giovana Viana.</span>© Todos os direitos reservados.
+            Direitos autorais Giovana Viana © Todos os direitos reservados.
           </p>
         </footer>
     </div>
