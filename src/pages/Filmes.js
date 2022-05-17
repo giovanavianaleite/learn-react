@@ -1,5 +1,11 @@
-function Filmes() {
-    return <h1>Filmes</h1>
+import './Filmes.css'
+
+function Home() {
+    return (
+        <div className="linhaVertical">
+            <h1 className='font'>FILMES</h1>
+        </div>
+    )
 }
 
-export default Filmes
+export default Home
