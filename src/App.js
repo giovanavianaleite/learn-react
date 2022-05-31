@@ -4,6 +4,7 @@ import LayoutDefault from './pages/LayoutDefault'
 import Series from './pages/Series'
 import Sobre from './pages/Sobre'
 import Home from './pages/Home'
+import ListaDeFilmes from './components/ListaDeFilmes'
 
 function App() {
   return (

@@ -1,35 +1,46 @@
 import { useRef, useEffect} from 'react'
+import { useAuth } from '../providers/authProvider';
 
-const CadastraProduto = ({users, setUsers}) => {
+const CadastraProduto = () => {
 
-  const titleRef = useRef();
+  const tituloRef = useRef();
   const anoRef = useRef();
-  const priceRef = useRef();
+  const fotoRef = useRef();
+  const descricaoRef = useRef();
+  const saberRef = useRef();
+  const informacaoRef = useRef();
+  const { userLogged } = useAuth();
 
   useEffect(() => {
-    titleRef.current.focus()
+    tituloRef.current.focus()
   },[])
 
   const handleSubmit = (event) => {
     event.preventDefault()
     const formData = new FormData();
-    formData.append('title', event.target[0].value);
+    formData.append('titulo', event.target[0].value);
     formData.append('ano', event.target[1].value);
-    formData.append('price', event.target[2].value);
+    formData.append('foto', event.target[2].value);
+    formData.append('descricao', event.target[3].value);
+    formData.append('saber', event.target[4].value);
+    formData.append('informacao', event.target[5].value);
     
     fetch("http://localhost/lp2/api/product/create", {
         method: 'POST',
         body: formData,
         headers: {
-          "Access-Token": "fe163d9581dd08821b8b7fc9c0d04dda"
+          "Access-Token": userLogged.token
         }
       })
       .then((response) => response.json())
       .then((data) => {
-        titleRef.current.value = ''
-        photoRef.current.value = ''
-        priceRef.current.value = ''
-        titleRef.current.focus()
+        tituloRef.current.value = ''
+        anoRef.current.value = ''
+        fotoRef.current.value = ''
+        descricaoRef.current.value = ''
+        saberRef.current.value = ''
+        informacaoRef.current.value = ''
+        tituloRef.current.focus()
         console.log(data)
         alert(data.message)
       });
@@ -39,9 +50,13 @@ const CadastraProduto = ({users, setUsers}) => {
     <>
     <h1>Cadastra Produto</h1>
     <form onSubmit={(event) => handleSubmit(event)}>
-      <label>Title:</label><input ref={titleRef} type="text" name="title"/>
-      <label>Photo:</label><input ref={photoRef} type="text" name="photo"/>
-      <label>Price:</label><input ref={priceRef} type="text" name="price"/>
+      <label>Titulo:</label><input ref={tituloRef} type="text" name="titulo"/>
+      <label>Ano:</label><input ref={anoRef} type="text" name="ano"/>
+      <label>Foto:</label><input ref={fotoRef} type="text" name="foto"/>
+      <label>Descrição:</label><input ref={descricaoRef} type="text" name="descricao"/>
+      <label>Saber:</label><input ref={saberRef} type="text" name="saber"/>
+      <label>Informação:</label><input ref={informacaoRef} type="text" name="informacao"/>
+      
       <input type="submit" value="Cadastrar" />
     </form>
     </>
