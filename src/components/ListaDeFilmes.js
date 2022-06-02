@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./ListaDeFilmes.css" 
 
 const ListaDeFilmes = () => {
   const [products, setProducts] = useState(null);
@@ -15,9 +16,9 @@ return(
       products.map((product) => {
         return (
           <div key={product.id}>
-            <img src={product.foto} alt={product.titulo} />
-            <h1>{product.titulo}</h1>
-            <p>{product.ano}</p>
+            <img className="foto" src={product.foto} alt={product.titulo} />
+            <h1 className="titulo">{product.titulo}</h1>
+            <p>({product.ano})</p>
           </div>
         )
       })
