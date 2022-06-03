@@ -11,3 +11,13 @@
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
+
+.ano {
+    padding: 0 0 0 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.lista {
+    display: flex;
+}

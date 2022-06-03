@@ -16,9 +16,9 @@ return(
       products.map((product) => {
         return (
           <div key={product.id}>
-            <img className="foto" src={product.foto} alt={product.titulo} />
+            <img className="foto" src={product.foto} alt={product.titulo}/>
             <h1 className="titulo">{product.titulo}</h1>
-            <p>({product.ano})</p>
+            <p className="ano">({product.ano})</p>
           </div>
         )
       })
