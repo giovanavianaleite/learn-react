@@ -4,7 +4,7 @@ import LayoutDefault from './pages/LayoutDefault'
 import Series from './pages/Series'
 import Sobre from './pages/Sobre'
 import Home from './pages/Home'
-import ListaDeFilmes from './components/ListaDeFilmes'
+import Filme from './components/Filme'
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
           <Route path="/" element={<LayoutDefault />}>
             <Route index element={<Home />} />
             <Route path="/filmes" element={<Filmes />} />
+            <Route path="/filme/:id" element={<Filme />} />
             <Route path="/series" element={<Series />} />
             <Route path="/sobre" element={<Sobre />} />
           </Route>

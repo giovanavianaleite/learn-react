@@ -1,15 +1,19 @@
 .foto {
     border-radius: 22px;
-    width:160px;
-    height:220px;
+    width:100%;
+    height:200px;
     padding:15px;
-    margin: 0 0 0 -1px;
+}
+
+.cardFilmes {
+    width: 139px;
+    margin: 5px;
 }
 
 .titulo {
     padding: 0 0 0 15px;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .ano {
@@ -20,4 +24,5 @@
 
 .lista {
     display: flex;
+    flex-wrap: wrap;
 }
