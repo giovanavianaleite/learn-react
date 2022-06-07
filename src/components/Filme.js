@@ -16,7 +16,7 @@ const Filme = () => {
               <div >             
                 <img src="https://i.pinimg.com/236x/0c/d7/27/0cd727eef33af1d228a91e6c92a7e849.jpg"/>
                 <h1>Duna</h1>
-                <p>2021, Aventura/Ficção científica, 2h 35m
+                <p>2021, Aventura/Ficção científica, 2h 35m.
                     Diretor: Denis Villeneuve.
                     Baseado em:	Duna de Frank Herbert.
                     Elenco:	Timothée Chalamet, Rebecca Ferguson, Oscar Isaac
