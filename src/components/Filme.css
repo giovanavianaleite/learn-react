@@ -1,0 +1,48 @@
+.fotoFilme {
+    border-radius: 22px;
+    width: 239px;
+    height: 250px;
+    margin: 20px 13px;
+    padding:0px;
+}
+
+.descricaoBalao {
+    color: #7B7B7B;
+    font-family: 'Inter', sans-serif;
+}
+
+.descricaoBalao1 {
+    color: #7B7B7B;
+    font-family: 'Inter', sans-serif;
+}
+
+.balao {
+    background-color: #ebebeb;
+    border-radius: 22px;
+    padding: 31px;
+    margin: 13px 24px;
+}
+
+.balaoFoto {
+    display: flex;
+    flex-direction: row;
+}
+
+.tudo {
+    background-color: #ffff;
+    width: 80%;
+    margin: 25px auto;
+}
+
+.linhaHorizontal {
+    background-color: #EDAF0F;     
+    margin: 15px 0;
+}
+
+.naLinha {
+    display: inline-block;     
+    width: 149px;     
+    background-color: white;     
+    margin-left: 35px;
+}
+

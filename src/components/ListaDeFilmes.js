@@ -17,7 +17,7 @@ return(
       products.map((product) => {
         return (
           <div key={product.id} className="cardFilmes">
-           <Link to={"/filme/"+product.id}>
+           <Link to={"/filme/"+product.id} className="linkFilme">
             <img className="foto" src={product.foto} alt={product.titulo}/>
             <h1 className="titulo">{product.titulo}</h1>
            </Link>

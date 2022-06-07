@@ -2,7 +2,7 @@
     border-radius: 22px;
     width:100%;
     height:200px;
-    padding:15px;
+    padding:7px;
 }
 
 .cardFilmes {
@@ -14,6 +14,8 @@
     padding: 0 0 0 15px;
     font-family: 'Inter', sans-serif;
     font-size: 15px;
+    text-decoration: none !important;
+    color: black;
 }
 
 .ano {
@@ -25,4 +27,12 @@
 .lista {
     display: flex;
     flex-wrap: wrap;
+}
+
+.linkFilme {
+    text-decoration: none;
+}
+
+.titulo:hover {
+    color: #EDAF0F;
 }
