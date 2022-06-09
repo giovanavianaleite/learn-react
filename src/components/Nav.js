@@ -5,7 +5,6 @@ function Nav() {
         <div className='nav'>
         <Link to="/">Home</Link>
         <Link to="/filmes">Filmes</Link>
-        <Link to="/series">Séries</Link>
         <Link to="/sobre">O que é o The Critic!?</Link>
        </div>
     )

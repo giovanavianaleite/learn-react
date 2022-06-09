@@ -32,6 +32,7 @@
     background-color: #ffff;
     width: 80%;
     margin: 25px auto;
+    margin-bottom: 81px;
 }
 
 .linhaHorizontal {
@@ -46,3 +47,23 @@
     margin-left: 35px;
 }
 
+.naLinha1 {
+    display: inline-block;
+    width: 282px;
+    background-color: white;
+    margin-left: 35px
+}
+
+.fonte {
+    font-family: 'Inter', sans-serif;
+    padding: 0 0 15px 0;
+}
+
+.fonte1 {
+    font-family: 'Inter', sans-serif;
+    padding: 0 0 15px 0;
+}
+
+.fonte2 {
+    font-family: 'Inter', sans-serif;
+}

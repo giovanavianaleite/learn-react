@@ -6,7 +6,7 @@ const ListaDeFilmes = () => {
   const [products, setProducts] = useState(null);
 
 useEffect(() => {
-    fetch("http://localhost/lp2/api/product/select-all")
+    fetch("http://localhost/lp2-back/api/product/select-all")
         .then((response) => response.json())
         .then((data) => setProducts(data));
 }, []);

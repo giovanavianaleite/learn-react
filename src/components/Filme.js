@@ -8,18 +8,22 @@ const Filme = () => {
     const [filme, setFilme] = useState();
 
     useEffect(() => {
-        fetch("http://localhost/lp2/api/user/select-by-id/?id="+filmeId)
+        fetch("http://localhost/lp2-back/api/product/select-by-id/?id="+filmeId)
             .then((response) => response.json())
-            .then((data) => setFilme(data));
+            .then((data) => {
+                setFilme(data)
+                console.log(data)
+            });
     }, [filmeId]);
 
     return (
+              
               <div className='tudo'> 
               <div className='balaoFoto'>           
                 <img className="fotoFilme" src="https://i.pinimg.com/236x/0c/d7/27/0cd727eef33af1d228a91e6c92a7e849.jpg"/>
                 <div className='balao'>
                 <h1 className='tituloBalao'>Duna</h1>
-                <p className='descricaoBalao'>2021, Aventura/Ficção científica, 2h 35m.
+                <p className='descricaoBalao'>2021, Aventura/Ficção científica, 2h 35m.</p>
                 <p className='descricaoBalao1'>
                     Diretor: Denis Villeneuve.
                     Baseado em:	Duna de Frank Herbert.
@@ -28,52 +32,60 @@ const Filme = () => {
                     Chang Chen, Sharon Duncan-Brewster, Charlotte Rampling
                     Jason Momoa, Javier Bardem.
                     </p>
-                    </p>
+                    
                 </div>
                 </div> 
-                <p className='saber'>
+                <section className='saber'>
                         <h1 className='linhaHorizontal'>
                             <span className='naLinha'>
                             O QUE SABER
                             </span>
                         </h1>
-                        <p>
+                        <p className='fonte'>
                         CONSENSO DOS CRÍTICOS:
                         Dune ocasionalmente luta com seu material de origem pesado, mas esses problemas são amplamente ofuscados pelo escopo e ambição desta adaptação visualmente emocionante.
                         </p>
-                        <p>
+                        <p className='fonte1'>
                         AUDIÊNCIA DIZ:
-                        Duna , de Denis Villeneuve, parece e soa incrível – e uma vez que a história (reconhecidamente de construção lenta) o fisgue, você estará na ponta da cadeira para a sequência.</p>
+                        Duna , de Denis Villeneuve, parece e soa incrível – e uma vez que a história (reconhecidamente de construção lenta) o fisgue, você estará na ponta da cadeira para a sequência.
                         </p>
-                <p className='informacao'>
-                        Paul Atreides, um jovem brilhante e talentoso nascido em um grande destino além de sua compreensão, deve viajar para o planeta mais perigoso do universo para garantir o futuro de sua família e seu povo. À medida que forças malévolas explodem em conflito pelo suprimento exclusivo do planeta do recurso mais precioso que existe, apenas aqueles que podem vencer seu próprio medo sobreviverão.
-                        PG-13 (Algumas Imagens Perturbadoras|Sequências de
-                        Violência Forte|Material Sugestivo)
-                        Avaliação:
-                        Gênero:
-                        Aventura, Ficção Científica
-                        Linguagem original:
-                        Ingles
-                        Diretor:
-                        Denis Villeneuve
-                        Produtor:
-                        Denis Villeneuve ,Mary Parent ,Cale Boyter ,Joseph Caracciolo Jr.
-                        Escritor:
-                        Jon Spaihts , Denis Villeneuve , Eric Roth.
-                        Data de lançamento (Cinemas):
+                </section>
+                <section className='informacao'>
+                    <h1 className='linhaHorizontal'>
+                            <span className='naLinha1'>
+                            INFORMAÇÕES DO FILME
+                            </span>
+                    </h1>
+                    <section className='fonte2'>
+                        <p>Paul Atreides, um jovem brilhante e talentoso nascido em um grande destino além de sua compreensão, deve viajar para o planeta mais perigoso do universo para garantir o futuro de sua família e seu povo. À medida que forças malévolas explodem em conflito pelo suprimento exclusivo do planeta do recurso mais precioso que existe, apenas aqueles que podem vencer seu próprio medo sobreviverão.</p>
+                        <p>Avaliação: PG-13 (Algumas Imagens Perturbadoras|Sequências de
+                        Violência Forte|Material Sugestivo)</p>
+                        <p>Gênero:
+                        Aventura, Ficção Científica</p>
+                        <p>Linguagem original:
+                        Ingles</p>
+                        <p>Diretor:
+                        Denis Villeneuve</p>
+                        <p>Produtor:
+                        Denis Villeneuve ,Mary Parent ,Cale Boyter ,Joseph Caracciolo Jr.</p>
+                        <p>Escritor:
+                        Jon Spaihts , Denis Villeneuve , Eric Roth.</p>
+                        <p>Data de lançamento (Cinemas):
                         22 de outubro de 2021  Ampla.
                         Data de lançamento (Transmissão):
-                        22 de outubro de 2021.
-                        Bilheteria (EUA bruto):	
-                        US$ 108,3 milhões.
-                        Tempo de execução:
-                        2h 35m
-                        Distribuidor:
-                        Imagens da Warner Bros.
-                        Mistura de som:
-                        Dolby Atmos, Dolby Digital.
-                        Proporção da tela:
+                        22 de outubro de 2021.</p>
+                        <p>Bilheteria (EUA bruto):	
+                        US$ 108,3 milhões.</p>
+                        <p>Tempo de execução:
+                        2h 35m</p>
+                        <p>Distribuidor:
+                        Imagens da Warner Bros.</p>
+                        <p>Mistura de som:
+                        Dolby Atmos, Dolby Digital.</p>
+                        <p>Proporção da tela:
                         Escopo (2.35:1)</p>
+                    </section>
+                </section>
               </div>
             )
     }
