@@ -17,24 +17,29 @@ const Filme = () => {
     }, [filmeId]);
 
     return (
-              
-              <div className='tudo'> 
-              <div className='balaoFoto'>           
-                <img className="fotoFilme" src="https://i.pinimg.com/236x/0c/d7/27/0cd727eef33af1d228a91e6c92a7e849.jpg"/>
-                <div className='balao'>
-                <h1 className='tituloBalao'>Duna</h1>
-                <p className='descricaoBalao'>2021, Aventura/Ficção científica, 2h 35m.</p>
-                <p className='descricaoBalao1'>
+            <div className='tudo'> 
+            {products &&
+                products.map((product) => {
+        return (
+             <div key={product.id} className="cardFilmes" onClick={() => navigate('filme/'+product.id)}>
+                <div className='balaoFoto'>
+                    <div>
+                      <img className="fotoFilme">{product.foto}</img>
+                    </div>           
+                    <img className="fotoFilme" src="https://i.pinimg.com/236x/0c/d7/27/0cd727eef33af1d228a91e6c92a7e849.jpg"/>
+                    <div className='balao'>
+                    <h1 className='tituloBalao'>Duna</h1>
+                    <p className='descricaoBalao'>2021, Aventura/Ficção científica, 2h 35m.</p>
+                    <p className='descricaoBalao1'>
                     Diretor: Denis Villeneuve.
                     Baseado em:	Duna de Frank Herbert.
                     Elenco:	Timothée Chalamet, Rebecca Ferguson, Oscar Isaac
                     Josh Brolin, Stellan Skarsgård, Dave Bautista, Stephen McKinley Henderson, Zendaya, David Dastmalchian
                     Chang Chen, Sharon Duncan-Brewster, Charlotte Rampling
                     Jason Momoa, Javier Bardem.
-                    </p>
-                    
+                    </p>   
                 </div>
-                </div> 
+            </div> 
                 <section className='saber'>
                         <h1 className='linhaHorizontal'>
                             <span className='naLinha'>
