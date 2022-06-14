@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from "../assets/img/logo.svg";
 const Header = () => {
     return (
         <header className="header-nav">
-            <Link to="/"><Logo className="logo"/></Link>
+            <Link to="/filmes"><Logo className="logo"/></Link>
             <p className="nome">
                 <span>THE CRITIC!</span>
             </p>

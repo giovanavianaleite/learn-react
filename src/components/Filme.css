@@ -9,18 +9,16 @@
 .descricaoBalao {
     color: #7B7B7B;
     font-family: 'Inter', sans-serif;
+    display: flex;
 }
 
-.descricaoBalao1 {
-    color: #7B7B7B;
-    font-family: 'Inter', sans-serif;
-}
 
 .balao {
     background-color: #ebebeb;
     border-radius: 22px;
     padding: 31px;
     margin: 13px 24px;
+    width: 100%;
 }
 
 .balaoFoto {
@@ -42,14 +40,14 @@
 
 .naLinha {
     display: inline-block;     
-    width: 149px;     
+    width: 121px;     
     background-color: white;     
     margin-left: 35px;
 }
 
 .naLinha1 {
     display: inline-block;
-    width: 282px;
+    width: 217px;
     background-color: white;
     margin-left: 35px
 }
