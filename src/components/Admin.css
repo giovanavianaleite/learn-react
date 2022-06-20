@@ -1,0 +1,51 @@
+.fotoAdmin {
+    border-radius: 22px;
+    width:100%;
+    height:200px;
+    padding:7px;
+}
+
+.cardFilmes {
+    width: 139px;
+    margin: 5px;
+}
+
+.tituloAdmin {
+    padding: 0 0 0 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-decoration: none !important;
+    color: black;
+}
+
+.anoAdmin {
+    padding: 0 0 0 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.listaAdmin {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.linkFilme {
+    text-decoration: none;
+}
+
+.Adm {
+    padding: 15px;
+}
+
+.botao {
+    margin: 14px;
+    padding: 8px;
+    color: white;
+    background-color: #0085FF;
+    border-radius: 8px;
+    border-color: #0085FF;
+}
+.botao:hover {
+    color: #0085FF;
+    background-color: white;
+}

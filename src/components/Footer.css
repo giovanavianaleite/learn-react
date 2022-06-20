@@ -17,7 +17,9 @@ footer {
 
 .social_list li:hover {
     color:#fff;
+    cursor: pointer;
 }
+
 
 .direitos {
     padding: 1em 0 0 0;
