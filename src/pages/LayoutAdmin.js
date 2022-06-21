@@ -5,7 +5,6 @@ const LayoutAdmin = () => {
   return (
     <>
         <h1 className='Adm'>ADMINISTRAÇÃO THE CRITIC!</h1>
-        
         <Outlet />
     </>
   )

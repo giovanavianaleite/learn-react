@@ -49,3 +49,11 @@
     color: #0085FF;
     background-color: white;
 }
+
+.icones {
+    padding-left: 15px;
+}
+
+.icones svg {
+    font-size: 1.3em;
+}

@@ -10,6 +10,7 @@ import CadastraFilme from './components/CadastraFilme';
 import AuthProvider from './providers/AuthProvider'
 import NotFound from './pages/NotFound'
 import Admin from './components/Admin'
+import EditFilme from './components/EditFilme'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='admin' element={<LayoutAdmin />}>
             <Route index element={<Admin />}/>
             <Route path="cadastra-filme" element={<CadastraFilme />} />
+            <Route path="edit/:productId" element={<EditFilme />} />
           </Route>
 
 
