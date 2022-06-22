@@ -32,8 +32,9 @@ const handleTrashClick = (productId) => {
   }
 
     return(
+        <>
+        <Link to={"/admin/cadastra-filme"}><button className="botao">Novo Filme</button></Link>
         <div className="listaAdmin">
-            <Link to={"/admin/cadastra-filme"}><button className="botao">Novo Filme</button></Link>
             {products &&
             products.map((product) => {
                 return (
@@ -56,6 +57,7 @@ const handleTrashClick = (productId) => {
             })
         }
     </div>
+    </>
     )
 }
 

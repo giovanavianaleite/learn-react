@@ -1,0 +1,31 @@
+/* .formTitulo, .formAno, .formFoto, .formDescricao, .formSaber, .formInformacao {
+    position: absolute;
+} */
+
+.formFilme {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    row-gap: 0.5rem;
+}
+.campoFilme {
+    display: flex;
+    flex-direction: column;
+}
+.colunasFilme {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1rem;
+}
+.colunasFilme > div {
+    flex-grow: 1;
+}
+.formFilme input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.botao1 {
+    
+}

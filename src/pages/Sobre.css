@@ -1,0 +1,16 @@
+.tituloSobre {
+    margin: 15px 15px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.linhaVertical1 {
+    border-left: solid #EDAF0F 5px;
+    margin: 15px 15px;
+}
+
+.paragrafo1, .paragrafo2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    margin: 15px 15px;
+}

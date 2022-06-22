@@ -1,5 +1,6 @@
-import { useRef, useEffect} from 'react'
+import { useRef, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './CadastraFilme.css'
 
 
 const CadastraFilme = () => {
@@ -14,7 +15,7 @@ const CadastraFilme = () => {
 
   useEffect(() => {
     tituloRef.current.focus()
-  },[])
+  }, [])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -25,11 +26,11 @@ const CadastraFilme = () => {
     formData.append('descricao', event.target[3].value);
     formData.append('saber', event.target[4].value);
     formData.append('informacao', event.target[5].value);
-    
+
     fetch("http://localhost/lp2-back/api/product/create", {
-        method: 'POST',
-        body: formData,
-      })
+      method: 'POST',
+      body: formData,
+    })
       .then((response) => response.json())
       .then((data) => {
         tituloRef.current.value = ''
@@ -41,22 +42,24 @@ const CadastraFilme = () => {
         tituloRef.current.focus()
         navigate('/admin/')
       });
-  } 
+  }
 
   return (
-    <>
-    <h1>Novo Filme</h1>
-    <form onSubmit={(event) => handleSubmit(event)}>
-      <label>Titulo:</label><input ref={tituloRef} type="text" name="titulo"/>
-      <label>Ano:</label><input ref={anoRef} type="text" name="ano"/>
-      <label>Foto:</label><input ref={fotoRef} type="text" name="foto"/>
-      <label>Descrição:</label><input ref={descricaoRef} type="text" name="descricao"/>
-      <label>Saber:</label><input ref={saberRef} type="text" name="saber"/>
-      <label>Informação:</label><input ref={informacaoRef} type="text" name="informacao"/>
-      
-      <input type="submit" value="Cadastrar Filme" />
-    </form>
-    </>
+    <div className='tudinho'>
+      <h1>Novo Filme</h1>
+      <form className='formFilme' onSubmit={(event) => handleSubmit(event)}>
+        <div class="colunasFilme">
+          <div class="campoFilme"><label className='formTitulo'>Titulo:</label><input ref={tituloRef} type="text" name="titulo" /></div>
+          <div class="campoFilme"><label className='formAno'>Ano:</label><input ref={anoRef} type="text" name="ano" /></div>
+        </div>
+        <div class="campoFilme"><label className='formFoto'>Foto:</label><input ref={fotoRef} type="text" name="foto" /></div>
+        <div class="campoFilme"><label className='formDescricao'>Descrição:</label><input ref={descricaoRef} type="text" name="descricao" /></div>
+        <div class="campoFilme"><label className='formSaber'>Saber:</label><input ref={saberRef} type="text" name="saber" /></div>
+        <div class="campoFilme"><label className='formInformacao'>Informação:</label><input ref={informacaoRef} type="text" name="informacao" /></div>
+
+        <input style={{ cursor: 'pointer' }} type="submit" className='botao1' value="Cadastrar Filme" />
+      </form>
+    </div>
   )
 }
 
