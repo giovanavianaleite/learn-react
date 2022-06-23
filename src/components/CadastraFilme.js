@@ -45,21 +45,22 @@ const CadastraFilme = () => {
   }
 
   return (
-    <div className='tudinho'>
-      <h1>Novo Filme</h1>
+    <>
+      <h1 className='novoFilme'>Novo Filme:</h1>
       <form className='formFilme' onSubmit={(event) => handleSubmit(event)}>
         <div class="colunasFilme">
           <div class="campoFilme"><label className='formTitulo'>Titulo:</label><input ref={tituloRef} type="text" name="titulo" /></div>
           <div class="campoFilme"><label className='formAno'>Ano:</label><input ref={anoRef} type="text" name="ano" /></div>
         </div>
         <div class="campoFilme"><label className='formFoto'>Foto:</label><input ref={fotoRef} type="text" name="foto" /></div>
+        <div className='espaco'>
         <div class="campoFilme"><label className='formDescricao'>Descrição:</label><input ref={descricaoRef} type="text" name="descricao" /></div>
         <div class="campoFilme"><label className='formSaber'>Saber:</label><input ref={saberRef} type="text" name="saber" /></div>
         <div class="campoFilme"><label className='formInformacao'>Informação:</label><input ref={informacaoRef} type="text" name="informacao" /></div>
-
-        <input style={{ cursor: 'pointer' }} type="submit" className='botao1' value="Cadastrar Filme" />
-      </form>
-    </div>
+        </div>
+        <input style={{ cursor: 'pointer' }} type="submit" className='botao2' value="Cadastrar Filme" />
+        </form>
+        </>
   )
 }
 

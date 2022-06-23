@@ -1,7 +1,3 @@
-/* .formTitulo, .formAno, .formFoto, .formDescricao, .formSaber, .formInformacao {
-    position: absolute;
-} */
-
 .formFilme {
     display: flex;
     flex-direction: column;
@@ -26,6 +22,19 @@
     border: 1px solid #999;
 }
 
-.botao1 {
-    
+.botao2 {
+        margin: 14px;
+        padding: 8px;
+        color: white;
+        background-color: #0085FF;
+        border-radius: 8px;
+        border-color: #0085FF;
+}
+
+.espaco input{
+    height: 200px;
+}
+
+.novoFilme {
+    padding: 1rem;
 }

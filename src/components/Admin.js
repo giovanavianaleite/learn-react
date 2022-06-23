@@ -4,10 +4,15 @@ import { Link } from 'react-router-dom'
 import {BsTrash as IconTrash} from "react-icons/bs"
 import {TiEdit as IconEdit} from 'react-icons/ti'
 import { useNavigate } from 'react-router-dom'
+import Modalzin from './Modal.js'
+import  'bootstrap/dist/css/bootstrap.min.css' ;
 
 const Admin = () => {
   const [products, setProducts] = useState(null);
   const navigate = useNavigate();
+  const [modalShow, setModalShow] = useState(false);
+  const [idToDelete, setIdToDelete] = useState(0)
+
 
 useEffect(() => {
     fetch("http://localhost/lp2-back/api/product/select-all")
@@ -15,21 +20,10 @@ useEffect(() => {
         .then((data) => setProducts(data));
 }, []);
 
-const handleTrashClick = (productId) => {
-    const formData = new FormData();
-    formData.append('id', productId);
-    const urlDelete = "http://localhost/lp2-back/api/product/delete";
-    fetch(urlDelete, {
-      method: 'POST',
-      body: formData
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        alert(data.message)
-        const productsFiltered = products.filter((product) => { return product.id !== productId });
-        setProducts(productsFiltered)
-      });
-  }
+const handleTrashClick = (id) => {
+    setIdToDelete(id)
+    setModalShow(true)
+  } 
 
     return(
         <>
@@ -54,8 +48,15 @@ const handleTrashClick = (productId) => {
                 </div>
                 </div>
                 )
-            })
+            })  
         }
+        <Modalzin
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          excluir = {idToDelete}
+          setproducts={setProducts}
+          product={products}
+        />
     </div>
     </>
     )

@@ -43,13 +43,17 @@ const EditFilme = () => {
     return (
         <>
         {product ? (
-            <form onSubmit={(event) => handleSubmit(event)}>
-                <label>Titulo:</label><input type="text" name="titulo" defaultValue={product.titulo} />
-                <label>Ano:</label><input type="year" name="ano"  defaultValue={product.ano} />
-                <label>Foto:</label><input type="photo" name="foto"  defaultValue={product.foto} />
-                <label>Descrição:</label><input type="description" name="descricao"  defaultValue={product.descricao} />
-                <label>Saber:</label><input type="know" name="saber"  defaultValue={product.saber} />
-                <label>Informação:</label><input type="information" name="informacao"  defaultValue={product.informacao} />
+            <form className='formFilme' onSubmit={(event) => handleSubmit(event)}>
+                <div class="colunasFilme">
+                <div class="campoFilme"><label>Titulo:</label><input type="text" name="titulo" defaultValue={product.titulo} /></div>
+                <div class="campoFilme"><label>Ano:</label><input type="year" name="ano"  defaultValue={product.ano} /></div>
+                </div>
+                <div class="campoFilme"><label>Foto:</label><input type="photo" name="foto"  defaultValue={product.foto} /></div>
+                <div className='espaco'>
+                <div class="campoFilme"><label>Descrição:</label><input type="description" name="descricao"  defaultValue={product.descricao} /></div>
+                <div class="campoFilme"><label>Saber:</label><input type="know" name="saber"  defaultValue={product.saber} /></div>
+                <div class="campoFilme"><label>Informação:</label><input type="information" name="informacao"  defaultValue={product.informacao} /></div>
+                </div>
                 <div>
                 <input style={{cursor: 'pointer'}} className='botao1' type="submit" value="Editar Filme" />
                 </div>
